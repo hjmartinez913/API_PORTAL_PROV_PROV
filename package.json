@@ -1,0 +1,39 @@
+{
+  "name": "API_PORTAL_PROV_PROV",
+  "version": "1.0.0",
+  "dependencies": {
+    "@sap-cloud-sdk/connectivity": "^4",
+    "@sap-cloud-sdk/http-client": "^4",
+    "@sap-cloud-sdk/resilience": "^4",
+    "@sap/cds": "^9",
+    "@sap/xssec": "^4"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^2.4",
+    "@sap/cds-dk": "^10",
+    "@sap/dev-cap-tools": "^1.31.0"
+  },
+  "scripts": {
+    "start": "cds-serve"
+  },
+  "private": true,
+  "cds": {
+    "requires": {
+      "[production]": {
+        "auth": "xsuaa"
+      },
+      "ZMMGS_REGPROVEEPP_CRUD_SRV1": {
+        "kind": "odata-v2",
+        "model": "srv/external/ZMMGS_REGPROVEEPP_CRUD_SRV1",
+        "[production]": {
+          "credentials": {
+            "destination": "s4hana",
+            "path": "/sap/opu/odata/sap/ZMMGS_REGPROVEEPP_CRUD_SRV"
+          }
+        },
+        "csrf": true,
+        "csrfInBatch": true
+      }
+    }
+  }
+}

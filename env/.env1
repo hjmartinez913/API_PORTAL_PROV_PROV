@@ -1,0 +1,3 @@
+destinations='[{"name":"s4hana","url":"https://s4hana.dest","proxyHost":"http://127.0.0.1","proxyPort":"8887"}]'
+cds_requires='{"ZMMGS_REGPROVEEPP_CRUD_SRV1":{"impl":"@sap/cds/srv/remote-service.js","external":true,"kind":"odata-v2","model":"srv/external/ZMMGS_REGPROVEEPP_CRUD_SRV1","credentials":{"destination":"s4hana","path":"/sap/opu/odata/sap/ZMMGS_REGPROVEEPP_CRUD_SRV"}},"auth":{"strategy":"dummy","kind":"dummy"},"messaging":{"kind":"local-messaging"}}'
+VCAP_SERVICES='{}'

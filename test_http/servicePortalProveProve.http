@@ -1,0 +1,4 @@
+@baseUrl = http://localhost:4004
+### ------------------------------------------------------------------------
+# GET - Obtener proveedores
+GET {{baseUrl}}/odata/v4/remote-service-apiprov/ConsultaTablaProvSet?$filter=Taxnumxl eq '2744049782'
